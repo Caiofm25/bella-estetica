@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bella Estética</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Expletus+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="nivo-slider/themes/default/default.css">
+    <link rel="stylesheet" href="nivo-slider/nivo-slider.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+
+    <meta name="viewport" content="initial-scale=1">
+
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="nivo-slider/jquery.nivo.slider.js"></script>
+    <script src="digitalBush-jquery.maskedinput-9672630/src/jquery.maskedinput.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+    <script>
+
+        $(window).load(function () {
+
+            $('#banner').nivoSlider();
+
+            if ($(window).width() > 1000) {
+
+                $('#popup,#opacidade').delay(3000).fadeIn(500);
+
+            };
+
+            //ao clicar na classe fechar
+            $('.fechar,#opacidade').click(function () {
+
+
+                //esconde o popup e opacidade
+                $("#popup,#opacidade").fadeOut(500);
+
+            });
+
+            // if($(window).width() > 1000){
+
+            $('#quem-somos').click(function () {
+
+
+                $('.quem-somos-div,#opacidade-quem-somos,.fechar-quem-somos-img').fadeIn(500);
+
+
+            });
+
+            $('.fechar-quem-somos,.fechar-quem-somos-img').click(function () {
+
+
+                $('.quem-somos-div,#opacidade-quem-somos,.fechar-quem-somos-img').fadeOut(500);
+
+            });
+
+            $('#contato').click(function () {
+
+
+                $("#contato-div,#opacidade-contato").fadeIn();
+
+            });
+
+            $('#opacidade-contato,#fechar-contato').click(function () {
+
+
+                $('#opacidade-contato,#contato-div').fadeOut();
+
+            });
+
+
+            //$("#telefone1").mask("(99) 9999-9999?9");
+
+            $('#btn-menu').click(function () {
+
+
+                $('#menu-mob-2').slideToggle(500);
+
+            });
+
+
+            //$(document).ready(function(){
+
+            $("#telefone1").mask("(99) 99999-9999");
+            //$("input.cpf").mask("999.999.999-99");
+            //    $("input.cep").mask("99.999-999");
+
+            // });
+
+            /*
+            var altura = $('#quem-somos-mob2').height();
+            
+            alert(altura);
+            */
+
+
+
+
+
+            //$("").mask("(00) 0000-00009");  
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="popup">
+
+        <span class="fechar">X</span>
+
+        <a href="#">
+
+            <img src="img/popup.jpg" alt="">
+
+        </a>
+
+    </div>
+
+    <div id="opacidade-quem-somos"></div>
+
+    <div id="opacidade"></div>
+
+    <header id="topo">
+
+        <div class="largura-site">
+
+            <div id="logo">
+
+                <img src="img/logo.png" alt="">
+
+            </div>
+
+            <div id="btn-menu">
+
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+
+            </div>
+
+            <nav id="menu">
+
+                <a href="#">Home</a>
+                <a href="#" id="quem-somos">Quem Somos</a>
+                <a href="#">Serviços</a>
+                <a href="#">Clientes</a>
+                <a href="#" id="contato">Contato</a>
+
+            </nav>
+
+            <nav id="menu-mob">
+
+                <a href="#">Home</a>
+                <a href="https://www.google.com/#" id="quem-somos-mob">Quem Somos</a>
+                <a href="#">Serviços</a>
+                <a href="#">Clientes</a>
+                <a href="#" id="contato-mob">Contato</a>
+
+            </nav>
+
+            <div class="clearfix"></div>
+
+            <div id="menu2">
+
+                <nav id="menu-mob-2">
+
+                    <a href="#">Home</a>
+                    <a href="https://www.google.com/#" id="quem-somos-mob2">Quem Somos</a>
+                    <a href="#">Serviços</a>
+                    <a href="#">Clientes</a>
+                    <a href="#" id="contato-mob2">Contato</a>
+
+                </nav>
+
+            </div>
+        </div>
+
+    </header>
+    <div id="opacidade-contato"></div>
+
+
+    <div id="contato-div">
+        <img src="img/x.png" alt="" id="fechar-contato">
+
+        <h2>Envie-nos uma mensagem</h2>
+
+        <div id="esquerda">
+
+            <h3>Através do e-mail:</h3>
+            <form action="#" method="">
+
+                <span>Nome:<br><input type="text" name="nome" class="formulario"><br></span>
+                <span>Sobrenome:<br><input type="text" name="sobrenome" class="formulario"></span>
+                <span>E-mail:<br><input type="text" name="e-mail" class="formulario"></span>
+                <span>Mensagem:<br><textarea name="mensagem" class="formulario"></textarea></span>
+                <span>Telefone:<br><input id="telefone1" type="tel" name="tel" class="tel formulario" maxlength="11"></span>
+                <br><input type="submit" name="enviar" value="Enviar" id="botao-enviar">
+            </form>
+
+        </div>
+
+        <div id="direita">
+            <h3>Ou ligue através do telefone:</h3>
+
+            <p><span id="telefone">Tel:</span>(21) 3322-4455 / 98788-5544</p>
+
+
+
+        </div>
+
+    </div>
+
+    <div id="seta-banner" class="theme-default">
+
+        <div id="banner">
+
+            <img src="img/banner-1.jpg" alt="" data-thumb="img/banner-1.jpg" title="(21) 2332-1234">
+            <img src="img/banner-2.jpg" alt="" data-thumb="img/banner-2.jpg" title="(21) 2332-1234">
+            <img src="img/banner-3.jpg" alt="" data-thumb="img/banner-3.jpg" title="(21) 2332-1234">
+
+
+        </div>
+    </div>
+
+    <div id="banner-mob">
+
+        <img src="img/banner-1.jpg" alt="" data-thumb="img/banner-1.jpg" title="(21) 2332-1234">
+        <div id="complemento">(21) 2332-1234</div>
+
+    </div>
+
+    <img src="img/x.png" alt="" class="fechar-quem-somos-img">
+
+
+
+    <div class="quem-somos-div">
+
+        <h2>Quem somos:</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium magna nec metus scelerisque tincidunt. Aliquam sit amet imperdiet est, ut pretium lacus. Integer porttitor rutrum velit et efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum tempus.</p>
+
+        <h2>Nosso objetivo:</h2>
+
+        <p>Nulla facilisi. Maecenas varius leo vitae urna tristique, ac ornare purus aliquet. Etiam fringilla luctus nisi bibendum pulvinar. Aenean eu viverra lectus, quis ullamcorper mi. Nam finibus justo nulla, sed consectetur lacus gravida ac. Nullam feugiat pharetra mauris at ornare. Sed magna lectus, semper a lacus condimentum, rhoncus ornare lorem. Etiam ac risus a purus efficitur fringilla eu eu turpis. </p>
+
+        <h2>Por que nos escolher:</h2>
+        <p>Nulla facilisi. Maecenas varius leo vitae urna tristique, ac ornare purus aliquet. Etiam fringilla luctus nisi bibendum pulvinar. Aenean eu viverra lectus, quis ullamcorper mi. Nam finibus justo nulla, sed consectetur lacus gravida ac. Nullam feugiat pharetra mauris at ornare.</p>
+
+    </div>
+
+    <div class="largura-site">
+        <article id="destaque">
+
+            <h1>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum ante eu lectus gravida commodo.”</h1>
+
+            <p>Ana Santos</p>
+
+        </article>
+
+
+        <div id="flex-section">
+
+            <section class="coluna">
+
+                <h2>Nossos Serviços</h2>
+                <img src="img/imagem-servicos.jpg" alt="">
+                <a href="#" class="botao">Saiba mais</a>
+
+            </section>
+
+            <section class="coluna">
+
+                <h2>Especial dia da noiva</h2>
+                <img src="img/imagem-dia-da-noiva.jpg" alt="">
+                <a href="" class="botao">Saiba mais</a>
+
+            </section>
+
+            <section class="coluna">
+
+                <h2>Ambiente Bella Estética</h2>
+                <img src="img/imagem-ambiente.jpg" alt="">
+                <a href="" class="botao">Saiba mais</a>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <footer id="rodape">Tel: (21) 3322-4455 / 98788-5544<br>
+        Avenida Rio Branco, 185 - Sala 324 - Centro - Rio de Janeiro</footer>
+    <script>
+
+        (function ($) {
+            $(window).on("load", function () {
+                $(".quem-somos-div").mCustomScrollbar({
+                    theme: "dark",
+                    scrollButtons: { enable: true },
+                    scrollInertia: 600,
+                    scrollEasing: "easeOut"
+                });
+
+            });
+        })(jQuery);
+
+    </script>
+</body>
+
+</html>
